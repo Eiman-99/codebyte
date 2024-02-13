@@ -1,0 +1,36 @@
+@import url(utils.css);
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--darkMode-background-color);
+    font-family:'Courier New', Courier, monospace;
+    color: #fff;
+    line-height: 1.6;
+}
+
+header{
+    padding: 30px 40px;
+}
+
+#logo img{
+    width: 200px;
+}
+
+header h1{
+    font-family: 'Poppins';
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 3rem;
+}
+
+header p{
+    font-family: 'Jost' ;
+    width: 800px;
+    margin: 30 auto;
+    font-size: large;
+}
