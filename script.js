@@ -1,69 +1,47 @@
+import Test from "./Test.js";
+import Challenge from "./challenge.js";
+const challengeInstance = new Challenge(
+  "Example Challenge",
+  "This is an example challenge description.",
+  "Medium",
+  ["JavaScript", "Algorithms"],
+  "Write a function that reverses a string.",
+  "function reverseString(str) {\n  // Write your code here\n}",
+  ["Test.assertEquals(reverseString('hello') === 'olleh', true)", "Test.assertEquals(reverseString('world') === 'dlrow',true)", "Test.assert(reverseString('abc') === 'bca')"],
+  "function reverseString(str) {\n  return str.split('').reverse().join('');\n}"
+);
+let editor;
 require.config({ paths: { vs: '../node_modules/monaco-editor/min/vs' } });
-
 require(['vs/editor/editor.main'], () => {
   editor = monaco.editor.create(document.getElementById('container'), {
-    value: `function add(x,y) {
-  return x+y;
-}`,
+    value: starterCode,
     language: 'javascript'
   });
 });
 
+const starterCode = challengeInstance.starterCode;
 const submitBtn = document.getElementById('submitBtn');
 submitBtn.addEventListener('click', click);
 
 function click(e) {
-  try {
-    var code = editor.getValue();
+  const functionNameRegex = /function\s+(\w+)\s*\(/;
+  const match = starterCode.match(functionNameRegex);
+  const functionName = match ? match[1] : null;
 
-    var functionName = 'add';
-
-    var testParameters = [1, 2];
-    // TODO ---> Test cases array <---
-    var functionCallStatement = functionName + '(' + testParameters.join(', ') + ')';
-
-    console.log(functionCallStatement);
-
+  let codeSnippet = editor.getValue();
+  if (codeSnippet.includes(functionName)) {
+    codeSnippet += '\n\n' + Test;
+    challengeInstance.testCases.forEach(testCase => {
+      codeSnippet += `\n\n${testCase};`
+    });
     try {
-      code += '\n' + `
-function assertEquals(actual, expected, message) {
-  if (actual !== expected) {
-    throw new Error(message || 'Assertion failed: Expected ' + expected + ', but got ' + actual);
-    return false;
-  }
-  return true;
-}`
-      // For every test case 
-      code += '\n' + `
-try {
-      const res = assertEquals(${functionCallStatement}, 3, 'Addition of 7 and 2 should be equal to 9.'); // Example usage
-      console.log('Test passed', res);
-} catch (error) {
-      console.error('Test failed:', error.message);
-}
-
-try {
-  const res = assertEquals(${functionCallStatement}, 3, 'Addition of 3 and 5 should be equal to 8.'); // Example usage
-  console.log('Test passed', res);
-} catch (error) {
-  console.error('Test failed:', error.message);
-}
-
-try {
-  const res = assertEquals(${functionCallStatement}, 3, 'Addition of 3 and 6 should be equal to 9.'); // Example usage
-  console.log('Test passed', res);
-} catch (error) {
-  console.error('Test failed:', error.message);
-}`
-      console.log(code);
-      eval(code);
+      // console.log(codeSnippet);
+      eval(codeSnippet);
     } catch (error) {
-      console.error('Error appending function call statement:', error);
+      console.log(new String(error).split('\n')[0]);
     }
-  } catch (error) {
-    console.log("An error has occured", error);
+  } else {
+    console.log(`Function ${functionName} was not found.`);
   }
+
 }
-
-
-
