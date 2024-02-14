@@ -2,7 +2,12 @@ export default class Test {
 
   static assertEquals(actual, expected) {
     if (actual !== expected) {
-      console.log('❌ Test Failed: Expected ' + expected + ', but got ' + actual);
+      if (actual === '') {
+        actual = '""';
+      } else if (actual !== undefined) {
+        actual = '"' + actual + '"';
+      }
+      console.log('❌ Test Failed: Expected "' + expected + '", but got ' + actual);
     } else {
       console.log(`✅ Test Passed`);
     }

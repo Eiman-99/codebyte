@@ -7,7 +7,7 @@ const challengeInstance = new Challenge(
   ["JavaScript", "Algorithms"],
   "Write a function that reverses a string.",
   "function reverseString(str) {\n  // Write your code here\n}",
-  ["Test.assertEquals(reverseString('hello') === 'olleh', true)", "Test.assertEquals(reverseString('world') === 'dlrow',true)", "Test.assert(reverseString('abc') === 'bca')"],
+  ["Test.assertEquals(reverseString('hello'), 'olleh')", "Test.assertEquals(reverseString('world') ,'dlrow')", "Test.assertEquals(reverseString('abc'), 'bca')"],
   "function reverseString(str) {\n  return str.split('').reverse().join('');\n}"
 );
 let editor;
