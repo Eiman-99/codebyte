@@ -13,9 +13,32 @@ const challengeInstance = new Challenge(
 let editor;
 require.config({ paths: { vs: '../node_modules/monaco-editor/min/vs' } });
 require(['vs/editor/editor.main'], () => {
+  monaco.editor.defineTheme("alpha-dark", {
+    base: "vs-dark",
+    inherit: true,
+    rules: [],
+    colors: {
+      "editor.background": "#3B3C4A",
+      "editorCursor.foreground": "#0078d9",
+      "editor.lineHighlightBackground": "#57596C50",
+      "editorLineNumber.activeForeground": "#f1f8ff",
+      "editorLineNumber.foreground": "#687183",
+    }
+  });
+  monaco.editor.setTheme("alpha-dark");
   editor = monaco.editor.create(document.getElementById('container'), {
     value: starterCode,
-    language: 'javascript'
+    language: 'javascript',
+    fontFamily: "Fira Code",
+    fontSize: 16,
+    roundedSelection:true,
+    scrollBeyondLastLine: false,
+    automaticLayout:true,
+    scrollbar: {
+      verticalScrollbarSize: 17,
+      horizontalScrollbarSize: 17,
+      arrowSize: 30,
+    },
   });
 });
 

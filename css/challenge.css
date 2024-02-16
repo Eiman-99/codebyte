@@ -1,0 +1,231 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--darkMode-background-color);
+    color: #fff;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+main > div{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    height: 850px;
+  
+}
+
+.col {
+    width: 50%;
+    margin: 10px;
+    height: 100%;
+}
+
+#left-col{
+    display: flex;
+    flex-direction: column;
+   
+}
+
+
+#instructions-solutions-container{
+    display: flex;
+    width: 100%;
+    flex: 1;
+    height: 730px; 
+    
+}
+
+#display{
+    width: 100%;
+    overflow-y:auto;
+    background: #3B3C4A;
+    padding: 25px 30px;
+    line-height: 1.6;
+    border-radius: 15px;
+    font-family: 'Fira code';
+}
+
+#display ol{
+    padding-left: 25px;
+}
+
+#display h2{
+    margin-bottom: 30px;
+
+}
+
+#nav-tabs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 60px;
+    height: 300px;
+}
+
+.flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#nav-tabs a{
+    display: block;
+    text-align: center;
+    transform: rotate(-90deg);
+    color: #fff;
+    padding: 19px 30px;
+    border-radius: 10px 10px 0 0px;
+    font-family: 'Jost';
+}
+
+#solution-btn{
+    background: #787878;
+}
+
+#solution-btn:hover{
+    background: #696B7F;
+}
+
+#instructions-btn{
+    background: #3B3C4A;
+}
+
+/* #instructions-btn:hover{
+    background: #525252;
+} */
+
+#challenge-brief{
+    margin: 0 0 30px 65px;
+    font-family: 'Fira code';
+}
+
+#challenge-details{
+    display: flex;
+}
+
+.detail-name {
+    margin: 20px 70px 0 0;
+}
+
+#right-col{
+    display: flex;
+    flex-direction: column;
+}
+
+#tests{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+#dev-tools{
+    display: flex;
+    align-items: center;
+}
+
+ li{
+    list-style: none;
+}
+
+ li a{ 
+    color: #fff;
+    padding: 15px 15px;
+    border-radius: 10px 10px 0 0;
+    font-family: "Jost";
+}
+
+#tests-btn{
+    background: #3B3C4A;
+}
+
+/* #tests-btn:hover{
+    background: #525252;
+} */
+
+#console-btn{
+    background: #787878;
+}
+
+#console-btn:hover{
+    background: #696B7F;
+}
+
+#test-check{
+    margin-top: 10px;
+    background: #3B3C4A;
+    padding: 25px;
+    border-radius: 0 15px 15px 15px;
+    height: 230px;
+    overflow-y: auto;
+   
+}
+
+#test-check li{
+    padding-bottom: 15px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#submitBtn{
+    display: inline-block;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 15px 35px;
+    background: #6DAE57;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-size: large;
+}
+
+#test-check i{
+    background: #6DAE57;
+    padding: 5px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+/* Customize scrollbar for WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+}
+
+/* Track (background) of the scrollbar */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color of the track */
+    border-radius: 10px; /* Rounded corners for the track */
+}
+
+/* Handle (thumb) of the scrollbar */
+::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the handle */
+    border-radius: 10px; /* Rounded corners for the handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the handle on hover */
+}
+
+/* Make horizontal scrollbar, decorations overview ruler and vertical scrollbar arrows opaque */
+.monaco-editor .monaco-scrollable-element .scrollbar.horizontal,
+.monaco-editor .decorationsOverviewRuler,
+.monaco-editor .monaco-scrollable-element .scrollbar.vertical .arrow-background {
+  background: rgba(27, 35, 52, 1);
+  border-radius: 50px;
+}
+
+/* Make vertical scrollbar transparent to allow decorations overview ruler to be visible */
+.monaco-editor .monaco-scrollable-element .scrollbar.scrollbar.vertical {
+  background: rgba(59, 68, 93, 1);
+}
+
