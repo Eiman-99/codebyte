@@ -21,9 +21,13 @@ export default class Challenge {
 
   static updateLatestId() {
     Challenge.fetchAll((challenges) => {
-      Challenge.latestId = challenges.reduce((acc, curr) => {
-        return curr.id > acc.id ? curr : acc;
-      });
+      if (challenges.length > 0) {
+        Challenge.latestId = challenges.reduce((acc, curr) => {
+          return curr.id > acc.id ? curr : acc;
+        });
+        return;
+      }
+      Challenge.latestId = 1;
     });
   }
 
