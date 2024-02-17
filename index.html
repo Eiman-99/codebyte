@@ -1,27 +1,30 @@
-<!DOCTYh1E html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewh1ort" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/utils.css">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
     <title>CodeByte</title>
 </head>
+
 <body>
 
     <!-- Header -->
     <header>
         <div id="logo">
-          <img src="img/logo-darkmode.png">
+            <img src="img/logo-darkmode.png">
+            <a class='add-btn' href="#"><i class="fas fa-plus"></i> Add Challenge</a>
         </div>
-          <h1>Sharpen Your <span class="text-primary">Skills</span>, <br>
-          One Challenge at a Time
-          </h1>
-          <p>
-            <span class="text-primary">CodeByte</span> is your gateway to mastering coding challenges. Dive into our platform's intuitive editor, tackle a variety of challenges, 
+        <h1>Sharpen Your <span class="text-primary">Skills</span>, <br>
+            One Challenge at a Time
+        </h1>
+        <p>
+            <span class="text-primary">CodeByte</span> is your gateway to mastering coding challenges. Dive into our
+            platform's intuitive editor, tackle a variety of challenges,
             and elevate your coding skills effortlessly.
-          </p>
+        </p>
     </header>
 
     <!-- Challenges showcase -->
@@ -32,7 +35,7 @@
                 <a href="#"><img src="img/search-icon.png" alt=""></a>
             </div>
             <div class="flex-container">
-                <div class="flex-column column-1">
+                <div class="flex-row row1">
                     <div class="card">
                         <div class="card-container">
                             <div class="title">
@@ -47,11 +50,10 @@
                                 <h6>Strings</h6>
                                 <h6>Fundamentals</h6>
                             </div>
-                        </div>                        
+                            <a class="btn" href="#">Solve Challenge</a>
+                        </div>
                     </div>
-                    <div class="solve-btn">
-                        <button class="btn"><a href="#">Solve Challenge</a></button>
-                    </div>
+
                     <div class="card">
                         <div class="card-container">
                             <div class="title">
@@ -59,25 +61,25 @@
                                 <h6 class="func-diff medium">Medium</h6>
                             </div>
                             <div class="func-description">
-                                <p>Write a function to generate the Fibonacci sequence up to a certain number of terms.</p>
+                                <p>Write a function to generate the Fibonacci sequence up to a certain number of terms.
+                                </p>
                             </div>
                             <div class="tags">
                                 <h6>JavaScript</h6>
                                 <h6>Strings</h6>
                                 <h6>Fundamentals</h6>
                             </div>
+                            <a class="btn" href="#">Solve Challenge</a>
                         </div>
                     </div>
-                    <div class="solve-btn">
-                        <button class="btn"><a href="#">Solve Challenge</a></button>
-                    </div>
                 </div>
-                <div class="flex-column column-2">
+
+                <div class="flex-row row-2">
                     <div class="card">
                         <div class="card-container">
                             <div class="title">
                                 <h6 class="func-name">Palindrome Check</h6>
-                                <h6 class="func-diff easy" >Easy</h6>
+                                <h6 class="func-diff easy">Easy</h6>
                             </div>
                             <div class="func-description">
                                 <p>Write a function that checks whether a given string is a palindrome.</p>
@@ -87,11 +89,10 @@
                                 <h6>Strings</h6>
                                 <h6>Fundamentals</h6>
                             </div>
+                            <a class="btn" href="#"><i class="fas fa-house"></i>Solve Challenge</a>
                         </div>
                     </div>
-                    <div class="solve-btn">
-                        <button class="btn"><a href="#">Solve Challenge</a></button>
-                    </div>
+
                     <div class="card">
                         <div class="card-container">
                             <div class="title">
@@ -106,15 +107,44 @@
                                 <h6>Strings</h6>
                                 <h6>Fundamentals</h6>
                             </div>
+                            <a class="btn" href="#">Solve Challenge</a>
                         </div>
                     </div>
-                    <div class="solve-btn">
-                        <button class="btn"><a href="#">Solve Challenge</a></button>
-                    </div>
+
                 </div>
             </div>
         </div>
+
+        <section id="challenge-form">
+            <div class="form-wrap">
+                <div class="form-header">
+                    <h1>Add Challenge Details</h1>
+                    <a id="close-btn" href="#"><img src="img/close.png" alt=""></a>
+                </div>
+                <form action="">
+                    <div class="form-group">
+                        <label for="func-name">Function Name</label>
+                        <input type="text" id="funcName" name="func-name" placeholder="Write the name of your function">
+                    </div>
+                    <div class="form-group description">
+                        <label for="func-description">Function Desription</label>
+                        <textarea cols="50" name="textarea" placeholder="Write the description"></textarea>
+                    </div>
+                    <div class="form-group difficulty">
+                        <label for="">Function Difficulty</label>
+                        <div class="diff-levels">
+                            Easy <input type="radio"  name="func-difficulty">
+                            Medium <input type="radio"  name="func-difficulty">
+                            Hard <input type="radio"  name="func-difficulty">
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </section>
     </section>
     <script src="https://kit.fontawesome.com/15a790cbb1.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

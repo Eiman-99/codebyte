@@ -9,18 +9,31 @@ body{
     font-family:'Courier New', Courier, monospace;
     color: #fff;
     line-height: 1.6;
+    position: relative;
 }
 
 a{
     text-decoration: none;
+    color: #fff;
 }
 
 header{
     padding: 30px 40px;
 }
 
+#logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 #logo img{
     width: 200px;
+}
+
+#logo a{
+    font-size: larger;
+    font-family: 'Jost';
 }
 
 header h1{
@@ -33,7 +46,7 @@ header h1{
 header p{
     font-family: 'Jost' ;
     width: 800px;
-    margin: 30 auto;
+    margin: 30px auto;
     font-size: large;
 }
 
@@ -67,20 +80,30 @@ header p{
 
 .flex-container{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     margin-top: 3rem;
 }
 
+.flex-row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
 .card-container{
-    padding: 25px 30px;
+   padding: 25px;
+   display: flex;
+   flex-direction: column;
+ 
 }
 
 .card{
     background: #fff;
     color: #333;
-    border-radius: 10px 10px 0 0;
-    width: 745px;
-    height: 200px;
+    border-radius: 10px;
+    width: 750px;
+    height: 270px;
+   
 }
 
 .title{
@@ -114,7 +137,6 @@ header p{
 .tags{
    margin-top: 20px;
    display: flex;
-   padding-bottom: 20px;
 }
 
 .tags h6{
@@ -126,36 +148,109 @@ header p{
     font-family: 'jost';
 }
 
-.solve-btn {
+/* .solve-btn {
+   margin-top: 20px;
    display: flex;
    justify-content: center;
    align-items: center;
-   height: 80px;
+   height: 50px;
    width: 100%;
-   margin-bottom: 30px;
    background: #fff;
    border-top: 1px solid #a5a5a5 ;
-   border-radius: 0 0 10px 10px;
-}
+   border-radius: 0 0 10px 10px; 
+} */
 
 .btn{
-    width: 100%;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 15px;
     height: 100%;
-    border-radius: 0 0 10px 10px;
+    border-radius: 20px;
     border: none;
-    background: #fafafa;
+    /* background: #FFC700; */
     font-family: 'Jost';
     font-size: 20px;
     cursor: pointer;
+    color: #333;
 }
 
 .btn:hover{
-    background: #FFC700;
-    color: #222;
+    /* background: #FFCE20; */
+    color: rgb(201, 39, 39);
     font-size: 23px;
     font-weight: 500;
 }
 
-.btn a{
-    color: #222;
+#challenge-form{
+    display: none;
+    background: #fff;
+    position: fixed;
+    width: 800px;
+    top: 170px;
+    left: 525px;
+    /* z-index: 1; */
+    border-radius: 20px ;
+    color: #333;
 }
+
+.form-wrap{
+   padding: 20px 25px;
+   
+}
+
+.form-wrap img{
+  width: 20px;
+}
+
+.form-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-wrap h1{
+    font-family:"Jost";
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+} 
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+#funcName{
+    padding: 10px 15px;
+    width: 400px;
+    border-radius: 5px;
+    border: 1px #696969 solid;
+}
+
+label {
+    margin-right: 20px;
+    font-family: "jost";
+    font-size: large;
+}
+
+.description{
+    display: flex;
+}
+
+textarea{
+    height: 100px;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+::placeholder{
+    font-family: "jost";
+}
+
+.diff-levels{
+    font-family: "Jost";
+    display: inline;
+}
+
+.diff-levels input{
+    margin-right: 10px;
+}
+
+

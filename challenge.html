@@ -4,15 +4,110 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/utils.css">
+  <link rel="stylesheet" href="css/challenge.css">
   <title>Monaco Editor Example</title>
 </head>
 
 <body>
-  <div id="container" style="width: 500px; height: 300px;"></div>
-  <button id="submitBtn">Submit</button>
+
+  <main>
+    <div>
+    <!-- Left Column -->
+    <div id="left-col" class="col">
+      <!-- Challenge Brief -->
+      <div id="challenge-brief">
+        <!-- Challenge Title -->
+        <h1>Challenge Title</h1>
+        <!-- Difficulty and Time Container -->
+        <div id="challenge-details">
+          <!-- Difficulty -->
+          <h4 class="detail-name">DIFFICULTY: <span class="detail-value difficulty-text">EASY</span></h4>
+          <!-- Time -->
+          <h4 class="detail-name">MAX TIME: <span class="detail-value">12 min</span></h4>
+        </div>
+      </div>
+      <!-- Instructions and Solution -->
+      <div id="instructions-solutions-container">
+        
+        <!-- Navigation Tabs -->
+        <div class="flex">
+          <div id="nav-tabs">
+            <li><a id="instructions-btn" href="#">INSTRUCTIONS</a></li>
+            <li><a id="solution-btn" href="#">SOLUTION</a></li>
+          </div>
+        </div>
+
+        <!-- Display -->
+        <div id="display">
+          <h2>Challenge Instructions</h2>
+          <p>Welcome to the challenge! Follow the instructions below:</p>
+          <ol>
+            <li>Read the problem statement carefully.</li>
+            <li>Understand the input and output requirements.</li>
+            <li>Write your solution code in the provided editor.</li>
+            <li>Test your solution using the provided test cases.</li>
+            <li>Submit your solution when you're confident it works correctly.</li>
+            <li>Read the problem statement carefully.</li>
+            <li>Read the problem statement carefully.</li>
+            <li>Understand the input and output requirements.</li>
+            <li>Write your solution code in the provided editor.</li>
+            <li>Test your solution using the provided test cases.</li>
+            <li>Submit your solution when you're confident it works correctly.</li>
+            <li>Read the problem statement carefully.</li>
+            <li>Read the problem statement carefully.</li>
+            <li>Understand the input and output requirements.</li>
+            <li>Write your solution code in the provided editor.</li>
+            <li>Test your solution using the provided test cases.</li>
+            <li>Submit your solution when you're confident it works correctly.</li>
+            <li>Read the problem statement carefully.</li>
+            <li>Understand the input and output requirements.</li>
+            <li>Write your solution code in the provided editor.</li>
+            <li>Test your solution using the provided test cases.</li>
+            <li>Submit your solution when you're confident it works correctly.</li>
+            <li>Read the problem statement carefully.</li>
+            <li>Read the problem statement carefully.</li>
+            <li>Understand the input and output requirements.</li>
+            <li>Write your solution code in the provided editor.</li>
+            <li>Test your solution using the provided test cases.</li>
+            <li>Submit your solution when you're confident it works correctly.</li>
+            <li>Read the problem statement carefully.</li>
+          </ol>
+          <p>Remember to think critically and creatively!</p>
+        </div>
+      
+      </div>
+    </div>
+    <!-- Right Column -->
+    <div id="right-col" class="col">
+      <!-- Editor -->
+      <!-- <div id="editor-container"> -->
+      <div id="container" style="width: 100%; height: 60%;"></div>
+      <!-- </div> -->
+      <!-- Test Samples & Console -->
+      <div id="tests">
+        <div id="dev-tools">
+          <li ><a id="tests-btn"  href="#">SAMPLE TESTS</a></li>
+          <li><a id="console-btn"  href="#">CONSOLE</a></li>
+        </div>
+        <div id="test-check">
+          <li><i class="fas fa-check"></i>TEST PASSED </li>
+          <li><i class="fas fa-check"></i>TEST PASSED </li>
+          <li><i class="fas fa-check"></i>TEST PASSED </li>
+          <li><i class="fas fa-check"></i>TEST PASSED </li>
+          <li><i class="fas fa-check"></i>TEST PASSED </li>
+        </div>
+        <a href="#" id="submitBtn">RUN TESTS</a>
+      </div>
+    
+      
+    </div>
+  </div>
+  </main>
 
   <script src="../node_modules/monaco-editor/min/vs/loader.js"></script>
   <script type="module" src="editor.js"></script>
+  <script src="https://kit.fontawesome.com/15a790cbb1.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
