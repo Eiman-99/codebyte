@@ -9,6 +9,7 @@ body{
     font-family:'Courier New', Courier, monospace;
     color: #fff;
     line-height: 1.6;
+    position: relative;
 }
 
 a{
@@ -45,7 +46,7 @@ header h1{
 header p{
     font-family: 'Jost' ;
     width: 800px;
-    margin: 30 auto;
+    margin: 30px auto;
     font-size: large;
 }
 
@@ -178,6 +179,78 @@ header p{
     color: rgb(201, 39, 39);
     font-size: 23px;
     font-weight: 500;
+}
+
+#challenge-form{
+    display: none;
+    background: #fff;
+    position: fixed;
+    width: 800px;
+    top: 170px;
+    left: 525px;
+    /* z-index: 1; */
+    border-radius: 20px ;
+    color: #333;
+}
+
+.form-wrap{
+   padding: 20px 25px;
+   
+}
+
+.form-wrap img{
+  width: 20px;
+}
+
+.form-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-wrap h1{
+    font-family:"Jost";
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+} 
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+#funcName{
+    padding: 10px 15px;
+    width: 400px;
+    border-radius: 5px;
+    border: 1px #696969 solid;
+}
+
+label {
+    margin-right: 20px;
+    font-family: "jost";
+    font-size: large;
+}
+
+.description{
+    display: flex;
+}
+
+textarea{
+    height: 100px;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+::placeholder{
+    font-family: "jost";
+}
+
+.diff-levels{
+    font-family: "Jost";
+    display: inline;
+}
+
+.diff-levels input{
+    margin-right: 10px;
 }
 
 
