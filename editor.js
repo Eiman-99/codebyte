@@ -1,5 +1,5 @@
 import Test from "./Test.js";
-import Challenge from "./challenge.js";
+import Challenge from "./Challenge.js";
 const challengeInstance = new Challenge(
   "Example Challenge",
   "This is an example challenge description.",
@@ -31,9 +31,9 @@ require(['vs/editor/editor.main'], () => {
     language: 'javascript',
     fontFamily: "Fira Code",
     fontSize: 16,
-    roundedSelection:true,
+    roundedSelection: true,
     scrollBeyondLastLine: false,
-    automaticLayout:true,
+    automaticLayout: true,
     scrollbar: {
       verticalScrollbarSize: 17,
       horizontalScrollbarSize: 17,

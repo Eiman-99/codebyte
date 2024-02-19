@@ -1,60 +1,60 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background: var(--darkMode-background-color);
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
     color: #fff;
     line-height: 1.6;
     position: relative;
 }
 
-a{
+a {
     text-decoration: none;
     color: #fff;
 }
 
-header{
+header {
     padding: 30px 40px;
 }
 
-#logo{
+#logo {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-#logo img{
+#logo img {
     width: 200px;
 }
 
-#logo a{
+#logo a {
     font-size: larger;
     font-family: 'Jost';
 }
 
-header h1{
+header h1 {
     font-family: 'Poppins';
     text-align: center;
     margin-top: 4rem;
     font-size: 3rem;
 }
 
-header p{
-    font-family: 'Jost' ;
+header p {
+    font-family: 'Jost';
     width: 800px;
     margin: 30px auto;
     font-size: large;
 }
 
-.container{
+.container {
     margin: 0 12rem;
 }
 
-.search-container input{
+.search-container input {
     width: 100%;
     padding: 15px;
     border-radius: 10px;
@@ -64,82 +64,84 @@ header p{
 
 .search-container {
     position: relative;
-   
+
 }
 
-.search-container img{
+.search-container img {
     width: 30px;
     position: absolute;
     right: 20px;
     top: 15px;
 }
 
-.search-container input:focus{
+.search-container input:focus {
     outline: none;
 }
 
-.flex-container{
+.flex-container {
     display: flex;
     flex-direction: column;
     margin-top: 3rem;
 }
 
-.flex-row{
+.flex-row {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 15px;
+    flex-wrap: wrap;
+    /* margin: 15px; */
+    padding: 15px;
 }
 
-.card-container{
-   padding: 25px;
-   display: flex;
-   flex-direction: column;
- 
+.card-container {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
 }
 
-.card{
+.card {
     background: #fff;
     color: #333;
     border-radius: 10px;
-    width: 750px;
+    /* width: 750px; */
     height: 270px;
-   
+    margin: 15px;
 }
 
-.title{
+.title {
     display: flex;
     justify-content: space-between;
     font-size: 1.5rem;
 }
 
-.func-name{
+.func-name {
     color: #DE0000;
     font-family: 'Fira code';
 }
 
-.func-diff{
+.func-diff {
     font-family: 'Jost';
 }
 
-.easy{
+.easy {
     color: #5CC34B;
 }
 
-.medium{
+.medium {
     color: #FFC700;
 }
-.func-description{
+
+.func-description {
     margin-top: 30px;
     width: 600px;
     font-weight: 700;
 }
 
-.tags{
-   margin-top: 20px;
-   display: flex;
+.tags {
+    margin-top: 20px;
+    display: flex;
 }
 
-.tags h6{
+.tags h6 {
     margin-right: 20px;
     background: #5CC34B;
     padding: 5px 10px;
@@ -160,7 +162,7 @@ header p{
    border-radius: 0 0 10px 10px; 
 } */
 
-.btn{
+.btn {
     display: block;
     margin: 20px auto;
     padding: 10px 15px;
@@ -174,14 +176,14 @@ header p{
     color: #333;
 }
 
-.btn:hover{
+.btn:hover {
     /* background: #FFCE20; */
     color: rgb(201, 39, 39);
     font-size: 23px;
     font-weight: 500;
 }
 
-#challenge-form{
+#challenge-form {
     display: none;
     background: #fff;
     position: fixed;
@@ -189,35 +191,35 @@ header p{
     top: 170px;
     left: 525px;
     /* z-index: 1; */
-    border-radius: 20px ;
+    border-radius: 20px;
     color: #333;
 }
 
-.form-wrap{
-   padding: 20px 25px;
-   
+.form-wrap {
+    padding: 20px 25px;
+
 }
 
-.form-wrap img{
-  width: 20px;
+.form-wrap img {
+    width: 20px;
 }
 
-.form-header{
+.form-header {
     display: flex;
     justify-content: space-between;
 }
 
-.form-wrap h1{
-    font-family:"Jost";
+.form-wrap h1 {
+    font-family: "Jost";
     font-size: 1.5rem;
     margin-bottom: 50px;
-} 
+}
 
 .form-group {
     margin-bottom: 20px;
 }
 
-#funcName{
+#funcName {
     padding: 10px 15px;
     width: 400px;
     border-radius: 5px;
@@ -230,27 +232,25 @@ label {
     font-size: large;
 }
 
-.description{
+.description {
     display: flex;
 }
 
-textarea{
+textarea {
     height: 100px;
     border-radius: 5px;
     padding: 10px 15px;
 }
 
-::placeholder{
+::placeholder {
     font-family: "jost";
 }
 
-.diff-levels{
+.diff-levels {
     font-family: "Jost";
     display: inline;
 }
 
-.diff-levels input{
+.diff-levels input {
     margin-right: 10px;
 }
-
-
