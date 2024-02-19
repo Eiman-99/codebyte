@@ -40,9 +40,8 @@ export default class Challenge {
   }
 
   static fetchAll(cb) {
-    const str = localStorage.getItem('challenges');
-    if (str) {
-      const challenges = JSON.parse(str);
+    const challenges = JSON.parse(localStorage.getItem('challenges'));
+    if (challenges) {
       console.info(`[Challenge] ${challenges.length} Challenges are fetched.`);
       return cb(challenges);
     }
